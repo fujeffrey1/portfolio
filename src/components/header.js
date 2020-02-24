@@ -1,42 +1,23 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React from 'react';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+import VideoMP4 from '../videos/video.mp4';
+import VideoWEBM from '../videos/video.webm';
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+const Header = () => (
+    <header className="header">
+        <h1 className="header__text">
+            Hello, I'm <span className="highlight">Jeffrey Fu</span>
+            <br />
+            I'm a full stack web developer.
+        </h1>
+        <div className="bg-video">
+            <video className="bg-video__content" autoPlay muted loop>
+                <source src={VideoMP4} type="video/mp4" />
+                <source src={VideoWEBM} type="video/webm" />
+                Your browser is not supported!
+            </video>
+        </div>
+    </header>
+);
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
-
-export default Header
+export default Header;
