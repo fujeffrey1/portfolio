@@ -1,0 +1,20 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        background-color: $color-secondary;
+        border-radius: 0.8rem;
+        font-size: 1.6rem;
+        color: $color-white;
+        transition: all 0.2s;
+    }
+
+    &:hover {
+        background-color: $color-secondary-light;
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
+    }
+}
