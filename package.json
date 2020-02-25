@@ -1,7 +1,7 @@
 {
-    "name": "Jeffrey Fu",
+    "name": "Portfolio",
     "private": true,
-    "description": "Jeffrey Fu's Personal Website",
+    "description": "Jeffrey Fu's Portfolio",
     "version": "0.1.0",
     "author": "Jeffrey Fu <fujeffrey1@gmail.com>",
     "dependencies": {

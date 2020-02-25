@@ -1,3 +1,7 @@
-@mixin linearGradient {
+@mixin linearGradientPrimary {
     background: linear-gradient(to top, $color-primary-light, $color-primary-dark);
+}
+
+@mixin linearGradientSecondary {
+    background: linear-gradient(to top, $color-secondary-light, $color-secondary-dark);
 }

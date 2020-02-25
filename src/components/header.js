@@ -6,7 +6,7 @@ import VideoWEBM from '../videos/video.webm';
 const Header = () => (
     <header className="header">
         <h1 className="header__text">
-            Hello, I'm <span className="highlight">Jeffrey Fu</span>
+            Hello, I'm <span className="color-primary">Jeffrey Fu</span>
             <br />
             I'm a full stack web developer.
         </h1>
