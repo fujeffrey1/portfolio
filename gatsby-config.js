@@ -28,6 +28,14 @@ module.exports = {
             }
         },
         `gatsby-plugin-offline`,
-        `gatsby-plugin-sass`
+        `gatsby-plugin-sass`,
+        {
+            resolve: `gatsby-plugin-react-svg`,
+            options: {
+                rule: {
+                    include: `${__dirname}/src/icons`
+                }
+            }
+        }
     ]
 };

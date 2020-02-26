@@ -4,19 +4,24 @@
     align-items: center;
     position: sticky;
     top: 0;
-    padding: 1rem 10rem;
+    padding: 1.5rem 10rem;
+    z-index: 1000;
 
-    &--scrolled {
+    &.nav--scrolled {
         background-color: $color-primary;
+
+        a {
+            color: $color-grey-light;
+
+            &:hover {
+                color: $color-secondary;
+            }
+        }
     }
 
     &-logo {
         font-size: 2.8rem;
         letter-spacing: 1px;
-
-        a {
-            color: $color-primary;
-        }
     }
 
     &-list {
@@ -26,23 +31,19 @@
 
         &__item {
             list-style: none;
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             padding: 0 2rem;
-
-            &:hover {
-                a {
-                    color: $color-primary;
-                }
-            }
-
-            a {
-                color: $color-white;
-            }
         }
     }
 
     a {
         text-transform: uppercase;
         text-decoration: none;
+        font-weight: bold;
+        color: $color-primary;
+
+        &:hover {
+            color: $color-grey-light;
+        }
     }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 class Nav extends Component {
     constructor(props) {
@@ -26,24 +26,25 @@ class Nav extends Component {
             this.setState({ scrolled: false });
         }
     };
+
     render() {
         return (
             <nav className={`nav ${this.state.scrolled && 'nav--scrolled'}`}>
                 <h1 className="nav-logo">
-                    <Link to="/">{this.props.siteTitle}</Link>
+                    <AnchorLink href="#">{this.props.siteTitle}</AnchorLink>
                 </h1>
                 <ul className="nav-list">
                     <li className="nav-list__item">
-                        <Link to="/">About</Link>
+                        <AnchorLink href="#section-about">About</AnchorLink>
                     </li>
                     <li className="nav-list__item">
-                        <Link to="/projects">Projects</Link>
+                        <AnchorLink href="#section-projects">Projects</AnchorLink>
                     </li>
                     <li className="nav-list__item">
-                        <Link to="/uses">Uses</Link>
+                        <AnchorLink href="#section-uses">Uses</AnchorLink>
                     </li>
                     <li className="nav-list__item">
-                        <Link to="/blog">Blog</Link>
+                        <AnchorLink href="#section-contact">Contact</AnchorLink>
                     </li>
                 </ul>
             </nav>

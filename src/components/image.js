@@ -22,6 +22,7 @@ const Image = props => (
             }
         `}
         render={data => {
+            console.log(data.images.edges.length);
             const image = data.images.edges.find(n => {
                 return n.node.relativePath.includes(props.filename);
             });

@@ -3,17 +3,17 @@
     &:link,
     &:visited {
         text-decoration: none;
-        padding: 1.5rem 4rem;
+        padding: 1.5rem 3.5rem;
         display: inline-block;
-        background-color: $color-secondary;
-        border-radius: 0.8rem;
+        background-color: $color-primary;
         font-size: 1.6rem;
-        color: $color-white;
+        text-transform: uppercase;
+        color: $color-grey-light;
         transition: all 0.2s;
+        clip-path: polygon(0 15%, 100% 0%, 95% 100%, 0 90%);
     }
 
     &:hover {
-        background-color: $color-secondary-light;
         transform: translateY(-3px);
         box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
     }

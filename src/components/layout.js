@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import Nav from './nav';
+import Footer from './footer';
 import '../sass/main.scss';
 
 const Layout = ({ children }) => {
@@ -24,9 +25,7 @@ const Layout = ({ children }) => {
         <>
             <Nav siteTitle={title} />
             <div>{children}</div>
-            <footer className="footer">
-                {title} © {new Date().getFullYear()}
-            </footer>
+            <Footer title={title} />
         </>
     );
 };
