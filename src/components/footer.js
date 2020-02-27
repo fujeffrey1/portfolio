@@ -1,8 +1,8 @@
 import React from 'react';
 
-import GithubIcon from '../icons/github.svg';
-import LinkedinIcon from '../icons/linkedin.svg';
-import TwitterIcon from '../icons/twitter.svg';
+import GithubIcon from 'icons/github.svg';
+import LinkedinIcon from 'icons/linkedin.svg';
+import TwitterIcon from 'icons/twitter.svg';
 
 const Footer = ({ title }) => (
     <footer className="footer">

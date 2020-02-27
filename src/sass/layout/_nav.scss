@@ -15,6 +15,7 @@
 
             &:hover {
                 color: $color-secondary;
+                transform: translateY(-3px);
             }
         }
     }
@@ -41,9 +42,12 @@
         text-decoration: none;
         font-weight: bold;
         color: $color-primary;
+        transition: all 0.2s;
+        display: inline-block;
 
         &:hover {
             color: $color-grey-light;
+            transform: translateY(-3px);
         }
     }
 }

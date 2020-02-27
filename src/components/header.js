@@ -1,8 +1,8 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-import VideoMP4 from '../videos/video.mp4';
-import VideoWEBM from '../videos/video.webm';
+import VideoMP4 from 'videos/video.mp4';
+import VideoWEBM from 'videos/video.webm';
 
 const Header = () => (
     <header className="header">
