@@ -35,10 +35,10 @@ class Nav extends Component {
 
     render() {
         return (
-            <nav className={`nav ${this.state.scrolled && 'nav--scrolled'}`}>
+            <nav className={`nav${this.state.scrolled ? ' nav--scrolled' : ''}`}>
                 <h1 className="nav-logo">
+                    <AnchorLink href="#___gatsby">{this.props.siteTitle}</AnchorLink>
                     <CodeIcon />
-                    <AnchorLink href="#">{this.props.siteTitle}</AnchorLink>
                 </h1>
                 <ul className="nav-list">
                     <li className="nav-list__item">

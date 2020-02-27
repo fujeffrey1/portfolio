@@ -9,13 +9,13 @@
         font-size: 1.6rem;
         text-transform: uppercase;
         color: $color-grey-light;
-        transition: all 0.2s;
         clip-path: polygon(0 15%, 100% 0%, 95% 100%, 0 90%);
     }
 
     &:hover {
-        transform: translateY(-3px);
         color: $color-secondary;
-        box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
+        // box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
     }
+
+    @include selectable;
 }

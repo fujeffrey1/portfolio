@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import GithubIcon from 'icons/github.svg';
 import LinkedinIcon from 'icons/linkedin.svg';
@@ -12,5 +13,13 @@ const Footer = ({ title }) => (
         {title} © {new Date().getFullYear()}
     </footer>
 );
+
+Footer.propTypes = {
+    title: PropTypes.string
+};
+
+Footer.defaultProps = {
+    title: ``
+};
 
 export default Footer;

@@ -7,20 +7,45 @@
     padding: 1.5rem 10rem;
     z-index: 1000;
 
-    &.nav--scrolled {
-        background-color: $color-primary;
+    %nav-link {
+        display: flex;
+        align-items: center;
 
-        a {
-            color: $color-grey-light;
+        @include selectable;
+    }
 
-            &:hover {
+    %nav-link--primary {
+        @extend %nav-link;
+
+        &:hover {
+            a {
+                color: $color-grey-light;
+            }
+
+            svg {
+                // $color-white
+                filter: brightness(0) invert(1);
+            }
+        }
+    }
+
+    %nav-link--secondary {
+        @extend %nav-link;
+
+        &:hover {
+            a {
                 color: $color-secondary;
-                transform: translateY(-3px);
+            }
+
+            svg {
+                // $color-secondary
+                filter: invert(78%) sepia(26%) saturate(781%) hue-rotate(91deg) brightness(92%) contrast(93%);
             }
         }
     }
 
     &-logo {
+        @extend %nav-link--primary;
         font-size: 2.8rem;
         letter-spacing: 1px;
     }
@@ -31,6 +56,7 @@
         justify-content: space-between;
 
         &__item {
+            @extend %nav-link--primary;
             list-style: none;
             font-size: 1.6rem;
             padding: 0 2rem;
@@ -42,12 +68,32 @@
         text-decoration: none;
         font-weight: bold;
         color: $color-primary;
-        transition: all 0.2s;
-        display: inline-block;
+    }
 
-        &:hover {
+    svg {
+        // $color-primary
+        filter: invert(13%) sepia(77%) saturate(2621%) hue-rotate(198deg) brightness(89%) contrast(96%);
+        margin: 0 0.7rem;
+    }
+
+    &.nav--scrolled {
+        background-color: $color-primary;
+
+        .nav-logo {
+            @extend %nav-link--secondary;
+        }
+
+        .nav-list__item {
+            @extend %nav-link--secondary;
+        }
+
+        a {
             color: $color-grey-light;
-            transform: translateY(-3px);
+        }
+
+        svg {
+            // $color-grey-light
+            filter: invert(92%) sepia(11%) saturate(314%) hue-rotate(51deg) brightness(108%) contrast(92%);
         }
     }
 }

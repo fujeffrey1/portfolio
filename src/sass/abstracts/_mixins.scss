@@ -1,0 +1,8 @@
+@mixin selectable {
+    transition: all 0.2s;
+
+    &:hover {
+        transform: translateY(-3px);
+        cursor: pointer;
+    }
+}
