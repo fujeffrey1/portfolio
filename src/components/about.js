@@ -1,16 +1,18 @@
 import React from 'react';
 
 import LocationIcon from 'icons/location.svg';
-import GraduationIcon from 'icons/graduation.svg';
+import EducationIcon from 'icons/education.svg';
 import OfficeIcon from 'icons/office.svg';
 
 const About = () => (
-    // TODO: Two column layout
     <section id="section-about">
-        <LocationIcon />
-        <GraduationIcon />
-        <OfficeIcon />
-        About
+        <h2 className="section-heading">About</h2>
+        <div className="profile">
+            <LocationIcon />
+            <EducationIcon />
+            <OfficeIcon />
+        </div>
+        <div className="proficiency"></div>
     </section>
 );
 

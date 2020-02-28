@@ -1,4 +1,13 @@
 #section-about {
-    background-color: $color-grey-light;
-    height: 900px;
+    display: grid;
+    grid-template-columns: subgrid;
+    height: 750px;
+
+    .profile {
+        grid-column: col-start 1 / col-end 4;
+    }
+
+    .proficiency {
+        grid-column: col-start 4 / col-end 8;
+    }
 }
