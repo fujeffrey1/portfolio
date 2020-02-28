@@ -16,22 +16,20 @@
 
     %nav-link--primary {
         @extend %nav-link;
-
         &:hover {
             a {
                 color: $color-grey-light;
             }
 
             svg {
-                // $color-white
-                filter: brightness(0) invert(1);
+                // $color-grey-light
+                filter: invert(92%) sepia(11%) saturate(314%) hue-rotate(51deg) brightness(108%) contrast(92%);
             }
         }
     }
 
     %nav-link--secondary {
         @extend %nav-link;
-
         &:hover {
             a {
                 color: $color-secondary;
