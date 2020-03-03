@@ -2,7 +2,7 @@
     transition: all 0.2s;
 
     &:hover {
-        transform: translateY(-3px);
+        transform: translate3d(0, -3px, 0);
         cursor: pointer;
     }
 }

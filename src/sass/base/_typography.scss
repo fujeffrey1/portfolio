@@ -26,10 +26,12 @@
 
 body {
     font-family: 'Roboto Slab', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: $color-grey-light;
 }
 
 .section-heading {
     background-color: $color-primary;
+    padding: 2rem 5rem;
+    margin-bottom: 20px;
 }
