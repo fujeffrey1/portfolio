@@ -1,19 +1,38 @@
 #section-about {
-    padding: 6rem;
+    padding: 2rem 6rem;
 
     & .section-about__content {
         display: flex;
 
         & > div {
             flex: 1;
+            padding: 0 1.5rem;
         }
     }
 
     .profile {
-        &__img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        color: $color-grey-dark;
+
+        &__figure {
+            float: left;
+            width: 18rem;
+            height: 18rem;
+            border-radius: 50%;
+            overflow: hidden;
+            shape-outside: circle(50%);
+            margin-right: 2.8rem;
         }
 
-        &__caption {
+        &__img {
+            height: 100%;
+        }
+
+        svg {
+            margin-right: 1rem;
         }
     }
 

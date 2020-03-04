@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Image from './image';
 import LocationIcon from 'icons/location.svg';
 import EducationIcon from 'icons/education.svg';
 import OfficeIcon from 'icons/office.svg';
@@ -46,22 +47,37 @@ const About = () => (
         <h2 className="section-heading">About</h2>
         <div className="section-about__content">
             <div className="profile">
-                Hi !
-                <figure>
-                    <img src="#" alt="Jeffrey Fu" className="profile__img" />
-                    <figcaption className="profile__caption">Who am I?</figcaption>
-                </figure>
                 <div>
-                    <LocationIcon />
-                    New York, NY
+                    <figure className="profile__figure">
+                        <Image filename="profile.jpg" alt="Jeffrey Fu" className="profile__img" />
+                    </figure>
+                    <div className="profile__text">
+                        <h3>Who Am I?</h3>
+                        <p className="u-mb-small">
+                            I'm a full stack web developer who eagerly embraces DevOps culture. I am motivated and
+                            always looking to improve both my technical and soft skills.{' '}
+                        </p>
+                        <p>
+                            When I'm not working on a personal project or learning a new technology, I love to travel,
+                            weightlift, and play poker.
+                        </p>
+                    </div>
                 </div>
                 <div>
-                    <EducationIcon />
-                    Stony Brook University
-                </div>
-                <div>
-                    <OfficeIcon />
-                    Booz Allen Hamilton
+                    <div>
+                        <LocationIcon />
+                        New York, NY
+                    </div>
+                    <div>
+                        <EducationIcon />
+                        Stony Brook University <br />
+                        BS in Computer Science, Applied Mathematics and Statistics
+                    </div>
+                    <div>
+                        <OfficeIcon />
+                        Booz Allen Hamilton <br />
+                        Senior Software Engineer
+                    </div>
                 </div>
             </div>
             <div className="proficiency">{renderProficiencies()}</div>
