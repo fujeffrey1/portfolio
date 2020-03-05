@@ -1,6 +1,4 @@
 #section-about {
-    padding: 2rem 6rem;
-
     & .section-about__content {
         display: flex;
 
@@ -10,10 +8,15 @@
         }
     }
 
+    %center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .profile {
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: space-between;
         color: $color-grey-dark;
 
@@ -31,8 +34,50 @@
             height: 100%;
         }
 
-        svg {
-            margin-right: 1rem;
+        p {
+            font-size: 1.4rem;
+        }
+
+        &__tldr {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            margin-top: 3.5rem;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                text-align: center;
+                padding: 1.4rem;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $color-grey-light;
+                }
+
+                @include selectable;
+            }
+        }
+
+        &__subheading {
+            @extend %center;
+            background-color: $color-secondary;
+            padding: 1.2rem 2.5rem;
+            color: $color-grey-light;
+            margin-bottom: 0.5rem;
+            line-height: 2.4rem;
+
+            svg {
+                margin-right: 1rem;
+            }
+
+            & + strong {
+                color: $color-secondary-dark;
+            }
+
+            @include clipped;
         }
     }
 
@@ -43,10 +88,11 @@
         row-gap: 1.4rem;
 
         &__category {
+            @extend %center;
             grid-column: 1;
             background-color: $color-secondary;
-            padding: 0.8rem 2rem;
             text-align: center;
+            padding: 0 1.4rem;
         }
 
         &__bar {
@@ -60,10 +106,11 @@
         }
 
         &__percentage {
+            @extend %center;
             grid-column: 3;
             background-color: $color-grey-light;
             color: $color-grey-dark;
-            padding: 0.8rem 1.2rem;
+            padding: 0 1rem;
         }
     }
 }

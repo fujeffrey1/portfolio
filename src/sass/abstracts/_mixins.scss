@@ -6,3 +6,7 @@
         cursor: pointer;
     }
 }
+
+@mixin clipped {
+    clip-path: polygon(0 15%, 100% 0%, 95% 100%, 0 90%);
+}

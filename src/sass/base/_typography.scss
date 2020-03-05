@@ -31,7 +31,11 @@ body {
 }
 
 .section-heading {
+    display: inline-block;
     background-color: $color-primary;
-    padding: 2rem 5rem;
-    margin-bottom: 20px;
+    padding: 1.6rem 5rem;
+    margin: 2rem 0;
+    transform: rotate(-8deg);
+
+    @include clipped;
 }

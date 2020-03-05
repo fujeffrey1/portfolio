@@ -4,6 +4,14 @@ import Image from './image';
 import LocationIcon from 'icons/location.svg';
 import EducationIcon from 'icons/education.svg';
 import OfficeIcon from 'icons/office.svg';
+import CertificateIcon from 'icons/certificate.svg';
+
+const links = {
+    location: 'https://goo.gl/maps/dNQLYGUnd2N7Yunb7',
+    work: 'https://www.boozallen.com/',
+    education: 'https://www.stonybrook.edu/',
+    certification: 'https://aws.amazon.com/certification/'
+};
 
 const proficiencies = {
     HTML: '90',
@@ -14,7 +22,7 @@ const proficiencies = {
     'Node.js': '75',
     'ELK Stack': '70',
     Linux: '65',
-    AWS: '60',
+    Docker: '60',
     Java: '55'
 };
 
@@ -51,32 +59,54 @@ const About = () => (
                     <figure className="profile__figure">
                         <Image filename="profile.jpg" alt="Jeffrey Fu" className="profile__img" />
                     </figure>
-                    <div className="profile__text">
-                        <h3>Who Am I?</h3>
+                    <div>
+                        <h3 className="u-color-primary u-mb-small">Who Am I?</h3>
                         <p className="u-mb-small">
-                            I'm a full stack web developer who eagerly embraces DevOps culture. I am motivated and
-                            always looking to improve both my technical and soft skills.{' '}
+                            I'm a full stack web developer who eagerly embraces DevOps culture. I specialize in all
+                            things Javascript but I'm highly motivated and always looking to improve both my technical
+                            and soft skills.{' '}
                         </p>
                         <p>
-                            When I'm not working on a personal project or learning a new technology, I love to travel,
-                            weightlift, and play poker.
+                            When I'm not coding or learning a new technology, I love to travel, weightlift, play
+                            handball, and play poker.
                         </p>
                     </div>
                 </div>
-                <div>
-                    <div>
-                        <LocationIcon />
-                        New York, NY
+                <div className="profile__tldr">
+                    <div onClick={() => window.open(links.location)}>
+                        <span className="profile__subheading">
+                            <LocationIcon />
+                            <strong>Location</strong>
+                        </span>
+                        <strong>New York, NY</strong>
                     </div>
-                    <div>
-                        <EducationIcon />
-                        Stony Brook University <br />
-                        BS in Computer Science, Applied Mathematics and Statistics
+                    <div onClick={() => window.open(links.work)}>
+                        <span className="profile__subheading">
+                            <OfficeIcon />
+                            <strong>Work</strong>
+                        </span>
+                        <strong>Booz Allen Hamilton</strong>
+                        <p>Senior Software Engineer</p>
                     </div>
-                    <div>
-                        <OfficeIcon />
-                        Booz Allen Hamilton <br />
-                        Senior Software Engineer
+                    <div onClick={() => window.open(links.education)}>
+                        <span className="profile__subheading">
+                            <EducationIcon />
+                            <strong>Education</strong>
+                        </span>
+                        <strong>Stony Brook University</strong>
+                        <p>BS in Computer Science & Mathematics</p>
+                    </div>
+                    <div onClick={() => window.open(links.certification)}>
+                        <span className="profile__subheading">
+                            <CertificateIcon />
+                            <strong>Certifications</strong>
+                        </span>
+                        <strong>Amazon Web Services</strong>
+                        <p>
+                            Solutions Architect Associate
+                            <br />
+                            SysOps Administrator Associate
+                        </p>
                     </div>
                 </div>
             </div>
