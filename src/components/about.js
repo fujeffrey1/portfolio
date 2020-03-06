@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Image from './image';
+import InfoIcon from 'icons/info.svg';
 import LocationIcon from 'icons/location.svg';
 import EducationIcon from 'icons/education.svg';
 import OfficeIcon from 'icons/office.svg';
@@ -52,14 +53,17 @@ const renderProficiencies = () => {
 
 const About = () => (
     <section id="section-about">
+        <h2 className="section-heading">
+            <InfoIcon />
+            About
+        </h2>
         <div className="section-about__content">
             <div className="profile">
-                <h2 className="section-heading">About</h2>
                 <div>
                     <figure className="profile__figure">
                         <Image filename="profile.jpg" alt="Jeffrey Fu" className="profile__img" />
                     </figure>
-                    <div>
+                    <article>
                         <h3 className="u-color-primary u-mb-small">Who Am I?</h3>
                         <p className="u-mb-small">
                             I'm a full stack web developer who eagerly embraces DevOps culture. I specialize in all
@@ -70,7 +74,7 @@ const About = () => (
                             When I'm not coding or learning a new technology, I love to travel, weightlift, play
                             handball, and play poker.
                         </p>
-                    </div>
+                    </article>
                 </div>
                 <div className="profile__tldr">
                     <a target="_blank" rel="noopener noreferrer" href={links.location}>

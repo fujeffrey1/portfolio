@@ -22,8 +22,7 @@
             }
 
             svg {
-                // $color-grey-light
-                filter: invert(92%) sepia(11%) saturate(314%) hue-rotate(51deg) brightness(108%) contrast(92%);
+                filter: $svg-color-grey-light;
             }
         }
     }
@@ -36,8 +35,7 @@
             }
 
             svg {
-                // $color-secondary
-                filter: invert(78%) sepia(26%) saturate(781%) hue-rotate(91deg) brightness(92%) contrast(93%);
+                filter: $svg-color-secondary;
             }
         }
     }
@@ -68,8 +66,7 @@
     }
 
     svg {
-        // $color-primary
-        filter: invert(13%) sepia(77%) saturate(2621%) hue-rotate(198deg) brightness(89%) contrast(96%);
+        filter: $svg-color-primary;
         margin: 0 0.7rem;
     }
 
@@ -89,8 +86,7 @@
         }
 
         svg {
-            // $color-grey-light
-            filter: invert(92%) sepia(11%) saturate(314%) hue-rotate(51deg) brightness(108%) contrast(92%);
+            filter: $svg-color-grey-light;
         }
     }
 }

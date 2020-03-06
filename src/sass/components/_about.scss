@@ -17,7 +17,6 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            color: $color-grey-dark;
 
             &__figure {
                 float: left;
@@ -41,10 +40,10 @@
             &__tldr {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr 1fr;
+                grid-template-rows: max-content max-content;
                 gap: 1.4rem;
-                margin-top: 3.5rem;
-                padding: 0 10rem;
+                margin-top: 5rem;
+                padding: 0 4rem;
 
                 a {
                     text-decoration: none;

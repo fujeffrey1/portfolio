@@ -34,8 +34,14 @@ body {
     display: inline-block;
     background-color: $color-primary;
     padding: 1.6rem 5rem;
-    margin: 2rem 0;
+    margin-bottom: 1.6rem;
     transform: rotate(-8deg);
 
     @include clipped;
+
+    svg {
+        transform: scale(1.4);
+        filter: $svg-color-grey-light;
+        margin-right: 1rem;
+    }
 }

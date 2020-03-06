@@ -1,10 +1,14 @@
 import React from 'react';
 
 import Image from './image';
+import ProjectIcon from 'icons/project.svg';
 
 const Projects = () => (
     <section id="section-projects">
-        <h2 className="section-heading">Projects</h2>
+        <h2 className="section-heading">
+            <ProjectIcon />
+            Projects
+        </h2>
         <div className="section-projects__content">
             <div className="project">
                 <figure className="project__figure">
