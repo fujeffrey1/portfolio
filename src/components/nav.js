@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
@@ -11,22 +11,19 @@ import EnvelopIcon from 'icons/envelop.svg';
 const Nav = ({ siteTitle }) => {
     const [scrolled, setScrolled] = useState(false);
 
-    const handleScroll = useCallback(event => {
-        const { scrollY } = window;
-
-        if (scrollY > 0 && !scrolled) {
-            console.log('yes');
-            setScrolled(true);
-        } else if (scrollY === 0 && scrolled) {
-            console.log('no');
-            setScrolled(false);
-        }
-    }, []);
-
     useEffect(() => {
+        function handleScroll(event) {
+            if (window.scrollY > 0) {
+                setScrolled(true);
+            } else if (window.scrollY === 0) {
+                setScrolled(false);
+            }
+        }
         window.addEventListener('scroll', handleScroll);
-        return window.removeEventListener('scroll', handleScroll);
-    }, [handleScroll]);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
         <nav className={`nav${scrolled ? ' nav--scrolled' : ''}`}>
