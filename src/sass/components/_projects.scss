@@ -1,0 +1,15 @@
+#section-projects {
+    background-color: $color-secondary-light;
+
+    .section-projects__content {
+        display: flex;
+
+        .project {
+            height: 100px;
+
+            &__img {
+                height: 100%;
+            }
+        }
+    }
+}

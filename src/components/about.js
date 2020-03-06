@@ -52,9 +52,9 @@ const renderProficiencies = () => {
 
 const About = () => (
     <section id="section-about">
-        <h2 className="section-heading">About</h2>
         <div className="section-about__content">
             <div className="profile">
+                <h2 className="section-heading">About</h2>
                 <div>
                     <figure className="profile__figure">
                         <Image filename="profile.jpg" alt="Jeffrey Fu" className="profile__img" />
@@ -73,30 +73,30 @@ const About = () => (
                     </div>
                 </div>
                 <div className="profile__tldr">
-                    <div onClick={() => window.open(links.location)}>
+                    <a target="_blank" rel="noopener noreferrer" href={links.location}>
                         <span className="profile__subheading">
                             <LocationIcon />
                             <strong>Location</strong>
                         </span>
                         <strong>New York, NY</strong>
-                    </div>
-                    <div onClick={() => window.open(links.work)}>
+                    </a>
+                    <a target="_blank" rel="noopener noreferrer" href={links.work}>
                         <span className="profile__subheading">
                             <OfficeIcon />
                             <strong>Work</strong>
                         </span>
                         <strong>Booz Allen Hamilton</strong>
                         <p>Senior Software Engineer</p>
-                    </div>
-                    <div onClick={() => window.open(links.education)}>
+                    </a>
+                    <a target="_blank" rel="noopener noreferrer" href={links.education}>
                         <span className="profile__subheading">
                             <EducationIcon />
                             <strong>Education</strong>
                         </span>
                         <strong>Stony Brook University</strong>
                         <p>BS in Computer Science & Mathematics</p>
-                    </div>
-                    <div onClick={() => window.open(links.certification)}>
+                    </a>
+                    <a target="_blank" rel="noopener noreferrer" href={links.certification}>
                         <span className="profile__subheading">
                             <CertificateIcon />
                             <strong>Certifications</strong>
@@ -107,7 +107,7 @@ const About = () => (
                             <br />
                             SysOps Administrator Associate
                         </p>
-                    </div>
+                    </a>
                 </div>
             </div>
             <div className="proficiency">{renderProficiencies()}</div>
