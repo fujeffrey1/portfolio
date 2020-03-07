@@ -29,14 +29,12 @@
 
     %nav-link--secondary {
         @extend %nav-link;
-        &:hover {
-            a {
-                color: $color-secondary;
-            }
+        a {
+            color: $color-secondary;
+        }
 
-            svg {
-                filter: $svg-color-secondary;
-            }
+        svg {
+            filter: $svg-color-secondary;
         }
     }
 
@@ -74,11 +72,16 @@
         background-color: $color-primary;
 
         .nav-logo {
-            @extend %nav-link--secondary;
+            &:hover {
+                @extend %nav-link--secondary;
+            }
         }
 
         .nav-list__item {
-            @extend %nav-link--secondary;
+            &--active,
+            &:hover {
+                @extend %nav-link--secondary;
+            }
         }
 
         a {

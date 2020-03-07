@@ -6,7 +6,7 @@ import Nav from './nav';
 import Footer from './footer';
 import '../sass/main.scss';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, sections, activeSection }) => {
     const {
         site: {
             siteMetadata: { title }
@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
 
     return (
         <>
-            <Nav siteTitle={title} />
+            <Nav siteTitle={title} sections={sections} activeSection={activeSection} />
             <div>{children}</div>
             <Footer title={title} />
         </>
@@ -31,7 +31,14 @@ const Layout = ({ children }) => {
 };
 
 Layout.propTypes = {
-    children: PropTypes.node.isRequired
+    children: PropTypes.node.isRequired,
+    sections: PropTypes.arrayOf(PropTypes.string),
+    activeSection: PropTypes.string
+};
+
+Layout.defaultProps = {
+    sections: [],
+    activeSection: ``
 };
 
 export default Layout;

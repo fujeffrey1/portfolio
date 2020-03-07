@@ -8,7 +8,7 @@ import ProjectIcon from 'icons/project.svg';
 import PencilIcon from 'icons/pencil.svg';
 import EnvelopIcon from 'icons/envelop.svg';
 
-const Nav = ({ siteTitle }) => {
+const Nav = ({ siteTitle, sections, activeSection }) => {
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
@@ -20,10 +20,35 @@ const Nav = ({ siteTitle }) => {
             }
         }
         window.addEventListener('scroll', handleScroll);
+
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
+    const renderNavList = () => {
+        return sections.map(section => (
+            <li className={`nav-list__item${section === activeSection ? ' nav-list__item--active' : ''}`} key={section}>
+                {renderIcon(section)}
+                <AnchorLink href={`#section-${section}`}>{section}</AnchorLink>
+            </li>
+        ));
+    };
+
+    const renderIcon = section => {
+        switch (section) {
+            case 'about':
+                return <InfoIcon />;
+            case 'projects':
+                return <ProjectIcon />;
+            case 'blog':
+                return <PencilIcon />;
+            case 'contact':
+                return <EnvelopIcon />;
+            default:
+                break;
+        }
+    };
 
     return (
         <nav className={`nav${scrolled ? ' nav--scrolled' : ''}`}>
@@ -31,34 +56,21 @@ const Nav = ({ siteTitle }) => {
                 <AnchorLink href="#___gatsby">{siteTitle}</AnchorLink>
                 <CodeIcon />
             </h1>
-            <ul className="nav-list">
-                <li className="nav-list__item">
-                    <InfoIcon />
-                    <AnchorLink href="#section-about">About</AnchorLink>
-                </li>
-                <li className="nav-list__item">
-                    <ProjectIcon />
-                    <AnchorLink href="#section-projects">Projects</AnchorLink>
-                </li>
-                <li className="nav-list__item">
-                    <PencilIcon />
-                    <AnchorLink href="#section-blog">Blog</AnchorLink>
-                </li>
-                <li className="nav-list__item">
-                    <EnvelopIcon />
-                    <AnchorLink href="#section-contact">Contact</AnchorLink>
-                </li>
-            </ul>
+            <ul className="nav-list">{renderNavList()}</ul>
         </nav>
     );
 };
 
 Nav.propTypes = {
-    siteTitle: PropTypes.string
+    siteTitle: PropTypes.string,
+    sections: PropTypes.arrayOf(PropTypes.string),
+    activeSection: PropTypes.string
 };
 
 Nav.defaultProps = {
-    siteTitle: ``
+    siteTitle: ``,
+    sections: [],
+    activeSection: ``
 };
 
 export default Nav;

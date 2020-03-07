@@ -38,12 +38,13 @@
             }
 
             &__tldr {
+                width: 70%;
+                margin: auto;
+                margin-top: 5rem;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: max-content max-content;
                 gap: 1.4rem;
-                margin-top: 5rem;
-                padding: 0 4rem;
 
                 a {
                     text-decoration: none;
