@@ -7,9 +7,11 @@ import TwitterIcon from 'icons/twitter.svg';
 
 const Footer = ({ title }) => (
     <footer className="footer">
-        <GithubIcon />
-        <LinkedinIcon />
-        <TwitterIcon />
+        <div className="footer__links">
+            <GithubIcon />
+            <LinkedinIcon />
+            <TwitterIcon />
+        </div>
         {title} © {new Date().getFullYear()}
     </footer>
 );

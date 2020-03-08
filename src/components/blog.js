@@ -1,5 +1,14 @@
 import React from 'react';
 
-const Blog = () => <section id="section-blog">Blog</section>;
+import PencilIcon from 'icons/pencil.svg';
+
+const Blog = () => (
+    <section id="section-blog">
+        <h2 className="section-heading">
+            <PencilIcon />
+            Blog
+        </h2>
+    </section>
+);
 
 export default Blog;

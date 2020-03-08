@@ -21,8 +21,8 @@ const IndexPage = () => {
 
     // TODO: Fine-tune this
     const onChange = (section, isVisible) => {
-        console.log('section', section);
-        console.log('isVisible', isVisible);
+        // console.log('section', section);
+        // console.log('isVisible', isVisible);
         if (isVisible) {
             setActiveSection(section);
         } else {
