@@ -9,7 +9,7 @@ import Projects from '../components/projects';
 import Blog from '../components/blog';
 import Contact from '../components/contact';
 
-const sections = {
+const SECTIONS = {
     about: About,
     projects: Projects,
     blog: Blog,
@@ -31,7 +31,7 @@ const IndexPage = () => {
     };
 
     const renderSections = () => {
-        return Object.entries(sections).map(([section, Section]) => (
+        return Object.entries(SECTIONS).map(([section, Section]) => (
             <VisibilitySensor key={section} onChange={isVisible => onChange(section, isVisible)}>
                 <Section />
             </VisibilitySensor>
@@ -39,7 +39,7 @@ const IndexPage = () => {
     };
 
     return (
-        <Layout sections={Object.keys(sections)} activeSection={activeSection}>
+        <Layout sections={Object.keys(SECTIONS)} activeSection={activeSection}>
             <SEO title="Home" />
             <Header />
             <main>{renderSections()}</main>

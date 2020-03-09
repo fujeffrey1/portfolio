@@ -8,9 +8,7 @@
     z-index: 1000;
 
     %nav-link {
-        display: flex;
-        align-items: center;
-
+        @include flex-center;
         @include selectable;
     }
 

@@ -7,14 +7,14 @@ import EducationIcon from 'icons/education.svg';
 import OfficeIcon from 'icons/office.svg';
 import CertificateIcon from 'icons/certificate.svg';
 
-const links = {
+const LINKS = {
     location: 'https://goo.gl/maps/dNQLYGUnd2N7Yunb7',
     work: 'https://www.boozallen.com/',
     education: 'https://www.stonybrook.edu/',
     certification: 'https://aws.amazon.com/certification/'
 };
 
-const proficiencies = {
+const PROFICIENCIES = {
     HTML: '90',
     CSS: '90',
     Javascript: '85',
@@ -28,7 +28,7 @@ const proficiencies = {
 };
 
 // This relies on first value to be the highest
-const HIGHEST_PROFICIENCY = Object.values(proficiencies)[0];
+const HIGHEST_PROFICIENCY = Object.values(PROFICIENCIES)[0];
 
 const normalize = num => {
     const numNormalized = num / HIGHEST_PROFICIENCY;
@@ -37,7 +37,7 @@ const normalize = num => {
 };
 
 const renderProficiencies = () => {
-    return Object.entries(proficiencies).map(([category, percentage]) => {
+    return Object.entries(PROFICIENCIES).map(([category, percentage]) => {
         const width = normalize(percentage);
         return (
             <React.Fragment key={category}>
@@ -77,14 +77,14 @@ const About = () => (
                     </article>
                 </div>
                 <div className="profile__tldr">
-                    <a target="_blank" rel="noopener noreferrer" href={links.location}>
+                    <a target="_blank" rel="noopener noreferrer" href={LINKS.location}>
                         <span className="profile__subheading">
                             <LocationIcon />
                             <strong>Location</strong>
                         </span>
                         <strong>New York, NY</strong>
                     </a>
-                    <a target="_blank" rel="noopener noreferrer" href={links.work}>
+                    <a target="_blank" rel="noopener noreferrer" href={LINKS.work}>
                         <span className="profile__subheading">
                             <OfficeIcon />
                             <strong>Work</strong>
@@ -92,7 +92,7 @@ const About = () => (
                         <strong>Booz Allen Hamilton</strong>
                         <p>Senior Software Engineer</p>
                     </a>
-                    <a target="_blank" rel="noopener noreferrer" href={links.education}>
+                    <a target="_blank" rel="noopener noreferrer" href={LINKS.education}>
                         <span className="profile__subheading">
                             <EducationIcon />
                             <strong>Education</strong>
@@ -100,7 +100,7 @@ const About = () => (
                         <strong>Stony Brook University</strong>
                         <p>BS in Computer Science & Mathematics</p>
                     </a>
-                    <a target="_blank" rel="noopener noreferrer" href={links.certification}>
+                    <a target="_blank" rel="noopener noreferrer" href={LINKS.certification}>
                         <span className="profile__subheading">
                             <CertificateIcon />
                             <strong>Certifications</strong>

@@ -1,8 +1,28 @@
 .footer {
     background-color: $color-primary;
     padding: 7rem 0 5rem 0;
-    text-align: center;
 
-    &__links {
+    &__link-list {
+        @include flex-center;
+    }
+
+    &__link-item {
+        cursor: pointer;
+        background-color: $color-secondary-dark;
+        width: 5.5rem;
+        height: 5.5rem;
+        margin: 2.5rem 1.5rem;
+
+        @include selectable;
+        @include flex-center;
+
+        svg {
+            filter: $svg-color-grey-light;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        font-size: 1.2rem;
     }
 }
