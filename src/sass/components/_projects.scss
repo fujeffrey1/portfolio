@@ -10,15 +10,14 @@
             margin-top: 3rem;
             display: flex;
 
-            a:hover {
-                // TODO: Fix
-                opacity: 0.3;
-            }
-
             &__figure {
                 float: left;
                 width: 40rem;
                 height: 30rem;
+
+                &:hover {
+                    opacity: 0.3;
+                }
             }
 
             &__img {
@@ -27,13 +26,51 @@
             }
 
             &__text {
+                padding: 3rem;
+                line-height: 2;
+
+                h3 {
+                    color: $color-primary;
+                    font-size: 2.4rem;
+                    margin-bottom: 0.5rem;
+                }
+
+                h3,
+                a {
+                    text-transform: capitalize;
+                }
+
+                a {
+                    margin-right: 2rem;
+                    margin-top: 3rem;
+                    padding: 0.5rem 3rem;
+                }
+            }
+
+            &__uses {
+                width: 30%;
+                background-color: $color-secondary;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                gap: 1rem;
+                place-items: center center;
                 padding: 2rem;
             }
 
-            h3 {
-                color: $color-primary;
-                font-size: 2.2rem;
-                margin-bottom: 0.5rem;
+            &__bubble {
+                height: 9rem;
+                width: 9rem;
+                border: 3px solid $color-primary;
+                border-radius: 50%;
+                background-color: $color-secondary-dark;
+                transition: all 0.2s;
+
+                @include flex-center;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
             }
         }
     }
